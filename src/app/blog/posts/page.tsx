@@ -8,7 +8,7 @@ export default async function Page() {
 
   return (
     <>
-    {client && <p className='text-green-500'>Connected to DB</p>}
+    {client ? <p className='text-green-500'>Connected to DB</p> : <p className='text-res-500'>NOT Connected to DB</p>}
       <h1>Posts</h1>
       {posts.map((post) => <Post key={post.id} {...post} />)}
     </>)
